@@ -49,6 +49,9 @@ public class BecaUniversitaria {
     //ACCIONES / MÉTODOS
     
     public String compararInversion(int pTiempo, double pMonto, double pInteres){
+        this.pTiempo = pTiempo;
+        this.pMonto = pMonto;
+        this.pInteres = pInteres;
         double diferencia = calcularInteresCompuesto() - calcularInteresSimple();
         return "La diferencia entre la proyección de interés compuesto e interés simple es: $" + diferencia;
     }

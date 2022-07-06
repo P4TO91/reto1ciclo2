@@ -1,23 +1,15 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        BecaUniversitaria becaUniversitaria = new BecaUniversitaria();
+        System.out.println(becaUniversitaria.calcularInteresSimple());
+        System.out.println(becaUniversitaria.calcularInteresCompuesto());
+        System.out.println(becaUniversitaria.compararInversion(60, 13000, 1.4));
+
+        System.out.println("*******************************************************************");
+        BecaUniversitaria becaUniversitaria_2 = new BecaUniversitaria(48, 10000, 2.0);
+        System.out.println(becaUniversitaria_2.calcularInteresSimple());
+        System.out.println(becaUniversitaria_2.calcularInteresCompuesto());
+        System.out.println(becaUniversitaria_2.compararInversion(48,10000,2));
+
     }
 }
-
-/*
- * 
- * interesSimple = monto * (interes/100) * tiempo
- * interesCompuesto = monto * ( (1+ (interes/100))^tiempo - 1 )
- * compararInversion = interesCompuesto - interesSimple
- * 
- * 1) Crear clase 'BecaUniversitaria'
- * 2) Crear método compararInversion -> Sobrecar de métodos con parámetros y sin parámetros
- *      parámetros:
- *          * tiempo
- *          * monto
- *          * interes
- *      Retornar un String:
- *       *"La diferencia entre la proyección de interés compuesto e interés simple es: $" + diferencia
- *      En el caso de que no se envien datos o se instancie con el constructor sin parámetros:
- *       *"No se obtuvo diferencia entre las proyecciones, revisar los parámetros de entrada."
- */
